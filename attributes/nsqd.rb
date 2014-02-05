@@ -12,6 +12,9 @@ default["nsq"]["nsqd"]["http_address"] = "0.0.0.0:4151"
 # -lookupd-tcp-address=[]: lookupd TCP address (may be given multiple times)
 default["nsq"]["nsqd"]["lookupd_tcp_address"] = []
 
+# -lookupd-http-address=[]: lookupd HTTP address (may be given multiple times)
+default["nsq"]["nsqd"]["lookupd_http_address"] = ["0.0.0.0:4161"]
+
 # -max-body-size=5123840: maximum size of a single command body
 default["nsq"]["nsqd"]["max_body_size"] = "5123840"
 
