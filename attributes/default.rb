@@ -6,4 +6,4 @@ default['nsq']['go_version'] = 'go1.2'
 default['nsq']['arch'] = 'linux-amd64'
 
 # Common directories
-default['nsq']['data_path'] = '/var/spool/nsq'
+default['nsq']['data_path'] = '/mnt/nsq'
