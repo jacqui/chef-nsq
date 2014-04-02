@@ -2,7 +2,7 @@
 
 default["nsq"]["nsqadmin"]["graphite_url"]                  = ""
 default["nsq"]["nsqadmin"]["proxy_graphite"]                = false
-default["nsq"]["nsqadmin"]["http_address"]                  = "0.0.0.0:4171"
+default["nsq"]["nsqadmin"]["http_address"]                  = "127.0.0.1:80"
 default["nsq"]["nsqadmin"]["notification_http_endpoint"]    = nil
 default["nsq"]["nsqadmin"]["nsqd_http_address"]             = []
 default["nsq"]["nsqadmin"]["nsqd_template_dir"]             = "/usr/local/share/nsq/templates"
