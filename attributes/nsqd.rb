@@ -7,13 +7,13 @@ default["nsq"]["nsqd"]["max_heartbeat_interval"] = "1m0s"
 default["nsq"]["nsqd"]["data_path"] = default['nsq']['data_path']
 
 # -http-address="127.0.0.1:4151": <addr>:<port> to listen on for HTTP clients
-default["nsq"]["nsqd"]["http_address"] = "127.0.0.1:4151"
+default["nsq"]["nsqd"]["http_address"] = "#{node['ec2']['public_hostname']}:4151"
 
 # -lookupd-tcp-address=[]: lookupd TCP address (may be given multiple times)
 default["nsq"]["nsqd"]["lookupd_tcp_address"] = []
 
 # -lookupd-http-address=[]: lookupd HTTP address (may be given multiple times)
-default["nsq"]["nsqd"]["lookupd_http_address"] = ["127.0.0.1:4161"]
+default["nsq"]["nsqd"]["lookupd_http_address"] = ["#{node['ec2']['public_hostname']}:4161"]
 
 # -max-body-size=5123840: maximum size of a single command body
 default["nsq"]["nsqd"]["max_body_size"] = "5123840"

@@ -8,5 +8,5 @@ env PATH=/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/sbin:/sbin:/bin
 respawn
 
 script
-  exec su -s /bin/sh -c 'exec "$0" "$@"' nsqadmin -- /usr/local/bin/nsqadmin --lookupd-http-address=<%= node["nsq"]["nsqd"]["lookupd_http_address"].first %> --http-address=<%= node["nsq"]["nsqadmin"]["http_address"] %> 2>&1
+  /usr/local/bin/nsqadmin --lookupd-http-address=<%= node["nsq"]["nsqd"]["lookupd_http_address"].first %> --http-address=<%= node["nsq"]["nsqadmin"]["http_address"] %> 2>&1
 end script
