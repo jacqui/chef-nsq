@@ -5,8 +5,6 @@ stop on runlevel [!2345]
 
 env PATH=/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/sbin:/sbin:/bin
 
-respawn
-
 script
-  exec su -s /bin/sh -c 'exec "$0" "$@"' nsqd -- /usr/local/bin/nsqd --data-path=<%= node[:nsq][:nsqd][:data_path] %> --lookupd-tcp-address=<%= node[:nsq][:nsqd][:lookupd_tcp_address].first %> 2>&1
+exec su -s /bin/sh -c 'exec "$0" "$@"' nsqd -- /usr/local/bin/nsqd --data-path=<%= node[:nsq][:nsqd][:data_path] %> --lookupd-tcp-address=<%= node[:nsq][:nsqd][:lookupd_tcp_address].first %> >/dev/null 2>&1
 end script
